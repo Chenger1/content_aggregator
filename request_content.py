@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 res_data = {} 
 '''
-Contains imformation about web-sites to parse 
+Contains information about web-sites to parse 
 in format {'name':{
     'url':'http://something.com',
     'key':'key_to_parse',
@@ -15,7 +15,7 @@ with open('url_base.json', 'r') as base: #url saved in .json file
     url_base = json.loads(base.read())
 
 def get_content():
-    """Send request to url which taked from res_data"""
+    """Sends request to url which took from res_data"""
     for i in url_base:
         response_data = requests.get(url_base[i]['url']).text
         soup = BeautifulSoup(response_data, 'html.parser')
