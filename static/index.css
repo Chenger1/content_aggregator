@@ -1,0 +1,19 @@
+.container{
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+li{
+    list-style: none;
+}
+
+.article{
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: normal;
+    max-width: 100%;
+}

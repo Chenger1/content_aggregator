@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block article %} 
+    {%for i in data%}
+        <div class="col source">
+            <ul>
+                <h2>{{i}}</h2>
+                {% for  j in data[i]%}
+                    <li>
+                        <span class="article">
+                            {{ j|safe }}
+                        </span>
+                    </li>
+                {%endfor%}
+            </ul>
+        </div>
+    {%endfor%}
+{% endblock %}

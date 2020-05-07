@@ -1,0 +1,14 @@
+{
+    "TechCrunch": {
+        "url": "https://techcrunch.com",
+        "key": "post-block__title__link"
+    },
+    "Habr" :{
+        "url": "https://habr.com/en/all/",
+        "key": "post__title_link"
+    },
+    "Techmeme": {
+        "url": "https://www.techmeme.com/",
+        "key": "ourh"
+    }
+}
