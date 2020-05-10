@@ -1,2 +1,5 @@
 content_env/
 __pycache__/
+.idea
+response_data
+response_data.json

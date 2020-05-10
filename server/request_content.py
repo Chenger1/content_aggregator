@@ -1,6 +1,8 @@
+from bs4 import BeautifulSoup
+
 import requests
 import json
-from bs4 import BeautifulSoup
+
 
 res_data = {} 
 '''
@@ -17,19 +19,12 @@ with open('url_base.json', 'r') as base: #url saved in .json file
 def get_content():
     """Sends request to url which took from res_data"""
     for i in url_base:
+        res_data[i] = {}
         response_data = requests.get(url_base[i]['url']).text
         soup = BeautifulSoup(response_data, 'html.parser')
-        data = soup.find_all(class_=url_base[i]['key'], limit=20)
-        res_data[i] = data  
+        temp_data = soup.find_all(class_=url_base[i]['key'], limit=20)
+        res_data[i] = [[j.attrs['href'], j.text] for j in temp_data]
     return res_data
-
-
-'''These functions would be helpful in the future'''
-# def make_request():
-#     data = requests.get(url_base['techcrunch']['url'])
-#     return data.text
-
-# def make_parse(data):
-#     soup = BeautifulSoup(data, 'html.parser')
-#     data = soup.find_all(class_='post-block')
-#     return data
+"""
+    m = [['habr',['url', 'text'], ['url', 'text']], ['TechCrunch', ['url', 'text']]]
+"""

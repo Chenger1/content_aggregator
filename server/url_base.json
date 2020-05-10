@@ -10,5 +10,17 @@
     "Techmeme": {
         "url": "https://www.techmeme.com/",
         "key": "ourh"
+    },
+    "Kanobu": {
+        "url": "https://kanobu.ru",
+        "key": "c-item_foot"
+    },
+    "Strana.ua":{
+        "url": "https://strana.ua/news.html",
+        "key": "article"
+    },
+    "Hacker News": {
+        "url": "https://news.ycombinator.com",
+        "key": "storylink"
     }
 }
