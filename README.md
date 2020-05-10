@@ -4,4 +4,4 @@ Libraries:
 1) Flask
 2) requests
 3) BeautifulSoup
-4) Apscheduler
+4) Vue.js
