@@ -16,7 +16,7 @@ in format {'name':{
 with open('url_base.json', 'r') as base: #url saved in .json file
     url_base = json.loads(base.read())
 
-def get_content():
+def get_content(res_data=res_data, url_base=url_base):
     """Sends request to url which took from res_data"""
     for i in url_base:
         res_data[i] = {}
@@ -26,5 +26,5 @@ def get_content():
         res_data[i] = [[j.attrs['href'], j.text] for j in temp_data]
     return res_data
 """
-    m = [['habr',['url', 'text'], ['url', 'text']], ['TechCrunch', ['url', 'text']]]
+    m = [['habr',['url', 'text'], ['TechCrunch', ['url', 'text']]]
 """
