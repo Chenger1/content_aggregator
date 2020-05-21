@@ -5,3 +5,4 @@ Libraries:
 2) requests
 3) BeautifulSoup
 4) Vue.js
+5) pytest
